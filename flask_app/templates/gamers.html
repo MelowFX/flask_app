@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Gamers</title>
+</head>
+<body>
+    <h1>Find Your Next Teammate</h1>
+
+    <form method="GET" action="/gamers">
+        <label for="game">Filter by Game:</label>
+        <select name="game" id="game">
+            <option value="">All</option>
+            <option value="Valorant">Valorant</option>
+            <option value="League of Legends">League of Legends</option>
+            <option value="CS2">CS2</option>
+        </select>
+        <button type="submit">Filter</button>
+    </form>
+
+    <ul>
+      {% for gamer in gamers %}
+        <li>{{ gamer['name'] }} - Plays {{ gamer['game'] }} (Available: {{ gamer['availability'] }})</li>
+      {% endfor %}
+    </ul>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

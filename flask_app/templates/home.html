@@ -6,7 +6,12 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Welcome to the Dog Walker App</h1>
-    <a href="/dog-walkers">See Available Dog Walkers</a>
+    <h1>Welcome to TeamRadar</h1>
+    <p>Find teammates for your favorite games.</p>
+    
+    <h3>Random Teammate Suggestion</h3>
+    <p>{{ random_gamer['name'] }} plays <strong>{{ random_gamer['game'] }}</strong> (Available: {{ random_gamer['availability'] }})</p>
+
+    <a href="/gamers">See Available Gamers</a>
 </body>
 </html>
